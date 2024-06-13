@@ -30,6 +30,15 @@ const ContextProvider = (props) => {
         }
     };
 
+    const handlePredictions = async (e) => {
+
+        const response = await fetch(`http://localhost:8000/predict`)
+        const data = await response.text();
+        console.log(data)
+    }
+
+    handlePredictions()
+
     const onSent = async () => {
 
         setResultData("")
