@@ -26,6 +26,8 @@ pip install -r requirements.txt
 uvicorn main:app
 ```
 
+![FastAPI](artifacts/fastapi.png)
+
 4. Start the frontend server
 
 ```
