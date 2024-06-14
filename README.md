@@ -3,6 +3,8 @@
 This project shows how to create a Full Stack RAG using Fastapi as a backend APi and React for the frontend. The framework used is Llamaindex.
 I've tried to make the UI similar to the Gemini website.
 
+![UI](artifacts/ui.png)
+
 ## Quick Start
 
 1. Setup a virtual environment.
