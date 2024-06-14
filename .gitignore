@@ -130,7 +130,7 @@ dmypy.json
 
 # TF code
 tensorflow_code
-
+*.gguf
 # Models
 proc_data
 

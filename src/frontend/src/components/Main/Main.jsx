@@ -34,22 +34,22 @@ const Main = () => {
 
               <div className="cards">
                   <div className="card">
-                      <p>Brainstorm presentation ideas about a topic</p>
+                      <p>The author's name</p>
                       <img src={assets.compass_icon} alt="" />
                   </div>
 
                   <div className="card">
-                      <p>Brainstorm presentation ideas about a topic</p>
+                      <p>What does the author do</p>
                       <img src={assets.bulb_icon} alt="" />
                   </div>
 
                   <div className="card">
-                      <p>Brainstorm presentation ideas about a topic</p>
+                      <p>What is lisp</p>
                       <img src={assets.message_icon} alt="" />
                   </div>
 
                   <div className="card">
-                      <p>Brainstorm presentation ideas about a topic</p>
+                      <p>Describe Paul's life</p>
                       <img src={assets.code_icon} alt="" />
                   </div>
               </div>

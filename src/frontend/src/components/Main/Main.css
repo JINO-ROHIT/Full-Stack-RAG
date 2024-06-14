@@ -49,7 +49,8 @@
     padding: 15px;
     background-color: #f0f4f9;
     border-radius: 10px;
-    position: relative;   
+    position: relative; 
+    flex: 1;  
 }
 
 .main .card img {

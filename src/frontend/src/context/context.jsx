@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import runChat from '../config/gemma';
 
 export const Context = createContext();
 
@@ -32,12 +31,13 @@ const ContextProvider = (props) => {
 
     const handlePredictions = async (e) => {
 
-        const response = await fetch(`http://localhost:8000/predict`)
+        console.log(input)
+        const response = await fetch(`http://localhost:8000/predict?prompt=${input}}`)
         const data = await response.text();
         console.log(data)
     }
 
-    handlePredictions()
+    // handlePredictions()
 
     const onSent = async () => {
 
@@ -46,7 +46,14 @@ const ContextProvider = (props) => {
         setshowResult(true)
         setrecentPrompt(input)
         setprevPrompts(prev => [...prev, input])
-        const response = await runChat(input)
+        // const response = await runChat(input)
+        const data = await fetch(`http://localhost:8000/predict?prompt=${input}}`)
+        const data_text = await data.text();
+
+        const parsedData = JSON.parse(data_text);
+        const response = parsedData.result.trim();
+        // console.log(response)
+
         let responseArray = response.split(" ");
         let newResponse;
         for (let i = 0; i < responseArray.length; i++)
@@ -55,7 +62,6 @@ const ContextProvider = (props) => {
             delayPara(i, nextWord+ " ")
         }
 
-        // setResultData(newResponse)
         setLoading(false)
         setInput("")
     }
