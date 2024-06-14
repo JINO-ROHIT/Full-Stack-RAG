@@ -35,3 +35,5 @@ npm run dev
 ```
 
 5. Start asking your questions!
+
+![FastAPI](artifacts/chat.png)
